@@ -4,6 +4,7 @@ import { ProdContext } from "../Context/Context";
 //styles
 import "./Products.css";
 
+
 function Products() {
   const { products } = useContext(ProdContext);
   console.log("products in prod component", products);
