@@ -16,6 +16,23 @@ function Header() {
     <div className="logo">
         <h1><Link to="/"><img src={Nikelogo} width="30" alt="" />Nike</Link></h1>
     </div>
+    <nav>
+        <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to ="/product">Product</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li>
+                <img src={CloseIcon} alt="close" width="20" />
+            </li>
+        </ul> 
+        <div className="nav-cart">
+            <Link to="/cart"> <img src={CartIcon} alt="cart icon" width="25"/>
+            </Link>
+           
+            <span>0</span>
+        </div>
+    </nav>
         </div>
     </div>
   )
