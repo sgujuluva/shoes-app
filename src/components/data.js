@@ -2,7 +2,7 @@ export const products = [
     {
         "id": "1",
         "title": "Nike Shoes 01",
-        "src": "https://e7.pngegg.com/pngimages/483/759/png-clipart-nike-air-max-nike-free-air-force-shoe-nike-white-outdoor-shoe-thumbnail.png",
+        "src": "https://e7.pngegg.com/pngimages/244/55/png-clipart-sneakers-nike-free-nike-air-max-shoe-nike-white-sport-thumbnail.png",
         "description": "Sneakers running shoe",
         "price": 83,
         "colors":["red","black","crimson","teal"],
