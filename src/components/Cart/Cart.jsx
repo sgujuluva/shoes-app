@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 //import "./Cart.css"
 function Cart() {
@@ -18,7 +19,7 @@ function Cart() {
     <section className="py-4 container">
       <div className="row justify-content-center align-items-center">
         <div className="col-12">
-          <h5>Total Items: ({totalItems})</h5>
+          <h2>Total Items: ({totalItems})</h2>
           <table className="table table-light table-hover m-0">
             <tbody>
               {items.map((item, index) => {
@@ -60,14 +61,18 @@ function Cart() {
             </tbody>
           </table>
         </div>
-        <div className="col-auto mt-20">
+        <div className="ms-2 mt-20">
           <h2>Total Price : {cartTotal.toFixed(2)}</h2>
+          <Link to = "/payment"><button className="btn btn-secondary ms-2">Payment</button></Link>
         </div>
         <div className="col-auto ms-auto">
           <button className="btn btn-secondary m-2" onClick={() => emptyCart()}>
             Clear Cart
           </button>
         </div>
+      
+        
+        
       </div>
     </section>
   );
