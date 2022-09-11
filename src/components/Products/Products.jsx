@@ -1,13 +1,22 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ProdContext } from "../Context/Context";
+import {useCart} from "react-use-cart";
 //styles
 import "./Products.css";
 
 
 function Products() {
+
   const { products } = useContext(ProdContext);
   console.log("products in prod component", products);
+
+//usecart
+const {addItem} = useCart();
+
+const handleAddToCart = () => {
+  
+}
 
   return (
     <div className="products">
@@ -22,7 +31,7 @@ function Products() {
             </h3>
             <span>{item.price.toFixed(2)} €</span>
             <p>{item.description}</p>
-            <button>Add to Cart</button>
+            <button onClick = {handleAddToCart}>Add to Cart</button>
           </div>
         </div>
       ))}
