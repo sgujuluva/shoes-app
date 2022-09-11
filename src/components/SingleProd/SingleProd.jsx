@@ -21,6 +21,9 @@ function SingleProd() {
             <div className="row">
               <h3>{item.title}</h3>
               <h2>{item.price.toFixed(2)} €</h2>
+              <p>{item.colors.map((color,i) => (
+                <button key={i}>{color}</button>
+              ))}</p>
             </div>
             <p>{item.description}</p>
             <Link to="/cart">Add to Cart</Link>
