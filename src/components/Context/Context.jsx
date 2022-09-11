@@ -5,7 +5,8 @@ import { products } from "../data.js";
 //creatingContext
 export const ProdContext = createContext();
 
-console.log("the prod in context are:", products);
+//console.log("the prod in context are:", products);
+
 
 function Context({ children }) {
   return (

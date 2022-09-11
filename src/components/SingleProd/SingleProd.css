@@ -1,0 +1,51 @@
+.details {
+  padding: 1%;
+  width: 30%;
+}
+.single-prod-details {
+  width: 100%;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+.single-prod-details img {
+  object-fit: contain;
+}
+.single-prod-details .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+.box .row {
+  width: 100%;
+
+  margin: 2%;
+}
+.box .row h2 {
+  margin: 2%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: crimson;
+}
+.box .desc {
+  margin: 2%;
+  width: 100%;
+}
+.box p button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  outline: none;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.box .cart {
+  background: #333;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  display: inline-block;
+}

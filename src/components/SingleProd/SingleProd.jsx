@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useParams } from "react-router-dom"; //hook to  get current pathname
+//import Colors from "../../Colors";
 import { ProdContext } from "../Context/Context";
 import "./SingleProd.css";
 
 function SingleProd() {
+
   const { products } = useContext(ProdContext);
 
   const params = useParams(); // to get the particular prod id with params
@@ -13,7 +15,7 @@ function SingleProd() {
   console.log("filteredProd is", filterProd);
 
   return (
-    <>
+    <div className="details">
       {filterProd.map((item) => (
         <div className="single-prod-details">
           <img src={item.src} alt="" />
@@ -22,15 +24,16 @@ function SingleProd() {
               <h3>{item.title}</h3>
               <h2>{item.price.toFixed(2)} €</h2>
               <p>{item.colors.map((color,i) => (
-                <button key={i}>{color}</button>
-              ))}</p>
+                <button key={i} style={{background : color}}></button>
+              ))}</p> 
+          {/*  <Colors singleProd = {item}/> */}
             </div>
-            <p>{item.description}</p>
-            <Link to="/cart">Add to Cart</Link>
+            <p className="desc">{item.description}</p>
+            <Link className = "cart" to="/cart">Add to Cart</Link>
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
