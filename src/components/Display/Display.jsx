@@ -2,6 +2,7 @@ import React from "react";
 import SingleProd from "../SingleProd/SingleProd";
 import Products from "../Products/Products";
 import { Routes, Route } from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 function Display() {
   return (
@@ -9,6 +10,7 @@ function Display() {
       <Routes>
         <Route path="/product" element={<Products />} />
         <Route path="/product/:id" element={<SingleProd />} />
+        <Route path="/cart" element = {<Cart/>}/>
       </Routes>
     </div>
   );

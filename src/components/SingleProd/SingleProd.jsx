@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { Link, useLocation, useParams } from "react-router-dom"; //hook to  get current pathname
 //import Colors from "../../Colors";
 import { ProdContext } from "../Context/Context";
+import { useCart } from "react-use-cart";
 import "./SingleProd.css";
+import Cart from "../Cart/Cart";
 
 function SingleProd() {
 
   const { products } = useContext(ProdContext);
-
+  const {addItem} = useCart();
+console.log("addItem is", addItem)
   const params = useParams(); // to get the particular prod id with params
   console.log("params are:", params.id);
   //getting that particular prod using filter
@@ -29,7 +32,8 @@ function SingleProd() {
           {/*  <Colors singleProd = {item}/> */}
             </div>
             <p className="desc">{item.description}</p>
-            <Link className = "cart" to="/cart">Add to Cart</Link>
+            <Link onClick = {() => addItem(filterProd)} to="/cart">Add to Cart</Link>
+          
           </div>
         </div>
       ))}

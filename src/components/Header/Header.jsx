@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "react-use-cart";
 //images
 import MenuIcon from "../../images/menuicon.png";
 import CloseIcon from "../../images/closeicon.png";
@@ -16,7 +17,8 @@ function Header() {
     setToggle( !toggle);
   };
   console.log("togle is:", toggle);
-
+//useCart
+const {totalItems} = useCart();
   return (
     <div className="header">
       <div className="header-menu">
@@ -64,7 +66,7 @@ function Header() {
               <img src={CartIcon} alt="cart icon" width="25" />
             </Link>
 
-            <span>0</span>
+            <span>{totalItems}</span>
           </div>
         </nav>
       </div>

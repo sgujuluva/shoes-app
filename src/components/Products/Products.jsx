@@ -4,6 +4,7 @@ import { ProdContext } from "../Context/Context";
 import {useCart} from "react-use-cart";
 //styles
 import "./Products.css";
+import Cart from "../Cart/Cart";
 
 
 function Products() {
@@ -13,10 +14,6 @@ function Products() {
 
 //usecart
 const {addItem} = useCart();
-
-const handleAddToCart = () => {
-  
-}
 
   return (
     <div className="products">
@@ -31,8 +28,9 @@ const handleAddToCart = () => {
             </h3>
             <span>{item.price.toFixed(2)} €</span>
             <p>{item.description}</p>
-            <button onClick = {handleAddToCart}>Add to Cart</button>
+            <button onClick={() => addItem(item)}>Add to Cart</button>
           </div>
+        
         </div>
       ))}
     </div>
