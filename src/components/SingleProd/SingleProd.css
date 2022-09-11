@@ -49,3 +49,11 @@
   padding: 10px 25px;
   display: inline-block;
 }
+.details a{
+  background: black;
+  color:white;
+  padding:1%;
+  text-align: center;
+  text-decoration: none;
+  width:80%;
+}
