@@ -14,11 +14,11 @@ function Header() {
   const [toggle, setToggle] = useState(false);
 
   const toggleHandle = () => {
-    setToggle( !toggle);
+    setToggle(!toggle);
   };
   console.log("togle is:", toggle);
-//useCart
-const {totalItems} = useCart();
+  //useCart
+  const { totalItems } = useCart();
   return (
     <div className="header">
       <div className="header-menu">
@@ -38,7 +38,7 @@ const {totalItems} = useCart();
           </h1>
         </div>
         <nav>
-          <ul className={toggle ? "toggle" : ""}>
+          <ul className={toggle ? "notToggle" : "toggle"}>
             <li>
               <Link to="/">Home</Link>
             </li>
