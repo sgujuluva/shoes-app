@@ -1,4 +1,9 @@
-
+::-webkit-scrollbar{
+    Background-color:white; }
+    ::-webkit-scrollbar-thumb{
+    Background:grey;
+    Border-radius :10px; }
+    
 .home-container img{
     width:40%;
     padding:0.5%;
