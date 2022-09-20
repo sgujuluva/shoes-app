@@ -1,9 +1,17 @@
-
+import shoe1 from "../images/shoe1.png";
+import shoe2 from "../images/shoe2.png";
+import shoe3 from "../images/shoe3.png";
+import shoe4 from "../images/shoe4.png";
+import shoe5 from "../images/shoe5.png";
+import shoe6 from "../images/shoe6.png";
+import shoe7 from "../images/shoe7.png";
+import shoe8 from "../images/shoe8.png";
+import shoe9 from "../images/shoe9.png";
 export const products = [
     {
         "id": "1",
         "title": "Nike Shoes 01",
-        "src": "https://e7.pngegg.com/pngimages/244/55/png-clipart-sneakers-nike-free-nike-air-max-shoe-nike-white-sport-thumbnail.png",
+        "src": shoe1,
         "description": "Sneakers running shoe",
         "price": 83,
         "colors":["red","black","crimson","teal"],
@@ -12,7 +20,7 @@ export const products = [
     {
         "id": "2",
         "title": "Nike Shoes 02",
-        "src": "https://e7.pngegg.com/pngimages/480/849/png-clipart-unpaired-blue-and-orange-nike-running-shoe-nike-free-air-force-shoe-sneakers-nike-shoes-background-blue-fashion-thumbnail.png",
+        "src": shoe2,
         "description": "Sneakers shoe jeans",
         "price": 95,
         "colors":["red","crimson","teal"],
@@ -21,7 +29,7 @@ export const products = [
     {
         "id": "3",
         "title": "Nike Shoes 03",
-        "src": "https://e7.pngegg.com/pngimages/473/228/png-clipart-nike-free-air-force-nike-air-max-shoe-men-shoes-blue-white-thumbnail.png",
+        "src": shoe3,
         "description": "Sneakers shoe fashion",
         "price": 90,
         "colors":["lightblue","white","crimson","teal"],
@@ -30,7 +38,7 @@ export const products = [
     {
         "id": "4",
         "title": "Nike Shoes 04",
-        "src": "https://e7.pngegg.com/pngimages/145/865/png-clipart-sneakers-nike-court-shoe-clothing-nike-white-outdoor-shoe-thumbnail.png",
+        "src": shoe4,
         "description": "Nike Product Shoe",
         "price": 55,
         "colors":["orange","black","crimson","teal"],
@@ -39,7 +47,7 @@ export const products = [
     {
         "id": "5",
         "title": "Nike Shoes 05",
-        "src": "https://e7.pngegg.com/pngimages/176/818/png-clipart-unpaired-black-running-shoe-sneakers-skate-shoe-nike-adidas-a-sports-shoes-white-sport-thumbnail.png",
+        "src": shoe5,
         "description": "Jordan jordan Nike",
         "price": 87,
         "colors":["orange","black","crimson","teal"],
@@ -48,7 +56,7 @@ export const products = [
     {
         "id": "6",
         "title": "Nike Shoes 06",
-        "src": "https://e7.pngegg.com/pngimages/818/609/png-clipart-unpaired-black-nike-shoe-air-force-nike-air-max-sneakers-shoe-simple-black-nike-shoes-png-material-white-thumbnail.png",
+        "src": shoe6,
         "description": "Shoe Nike Fashion",
         "price": 67,
         "colors":["orange","black","crimson","teal"],
@@ -57,7 +65,7 @@ export const products = [
     {
         "id": "7",
         "title": "Nike Shoes 07",
-        "src": "https://e7.pngegg.com/pngimages/426/590/png-clipart-nike-air-max-nike-free-sneakers-shoe-nike-outdoor-shoe-hiking-shoe-thumbnail.png",
+        "src": shoe7,
         "description": "Shoe Nike Fashion",
         "price": 67,
         "colors":["orange","black","crimson","teal"],
@@ -66,7 +74,7 @@ export const products = [
     {
         "id": "8",
         "title": "Nike Shoes 08",
-        "src": "https://e7.pngegg.com/pngimages/742/799/png-clipart-nike-air-max-sneakers-womens-nike-air-force-1-07-shoe-nike-thumbnail.png",
+        "src": shoe8,
         "description": "Shoe Nike Fashion",
         "price": 67,
         "colors":["orange","black","crimson","teal"],
@@ -75,7 +83,7 @@ export const products = [
     {
         "id": "9",
         "title": "Nike Shoes 09",
-        "src": "https://e7.pngegg.com/pngimages/30/966/png-clipart-nike-air-max-sneakers-nike-free-shoe-tenis-shoes-white-outdoor-shoe-thumbnail.png",
+        "src": shoe9,
         "description": "Shoe Nike Fashion",
         "price": 67,
         "colors":["orange","black","crimson","teal"],
