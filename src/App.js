@@ -7,6 +7,7 @@ import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/Home/Home";
 import Payment from "./components/Payment/Payment";
+import Contact from "./components/Contact/Contact";
 
 //styles
 import './App.css';
@@ -21,7 +22,7 @@ function App() {
         <Route path="/product" element={<Products />} />
         <Route path="/product/:id" element={<SingleProd />} />
         <Route path="/cart" element = {<Cart/>}/>
-        <Route path="/payment" element = {<Payment/>}/>
+        <Route path="/contact" element = {<Contact/>}/>
       </Routes>
     
       
