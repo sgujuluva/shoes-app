@@ -3,14 +3,14 @@
 }
 .products-container {
     display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 2% 0;
 }
 .products-container .card {
   
-  width: 24%;
-  margin-bottom: 3%;
+  width: 18rem;
+  margin: 2%;
   background-color: #fff;
   padding: 0.5%;
   min-height: fit-content;
