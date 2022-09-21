@@ -1,11 +1,15 @@
-::-webkit-scrollbar{
-    Background-color:white; }
-    ::-webkit-scrollbar-thumb{
-    Background:grey;
-    Border-radius :10px; }
-    
-.home-container img{
-    width:40%;
-    padding:0.5%;
-    margin: 5%;
+::-webkit-scrollbar {
+  background-color: white;
+  width:0.65rem;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+  
+}
+
+.home-container img {
+  width: 40%;
+  padding: 0.5%;
+  margin: 5%;
 }
