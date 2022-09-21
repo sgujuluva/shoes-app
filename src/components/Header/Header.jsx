@@ -49,7 +49,7 @@ function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/login">Register</Link>
             </li>
             <li>
               <img
