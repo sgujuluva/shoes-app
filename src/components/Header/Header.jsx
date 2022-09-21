@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 //images
@@ -8,10 +8,14 @@ import CartIcon from "../../images/carticon.png";
 import Nikelogo from "../../images/nikelogo.png";
 //styles
 import "./Header.css";
+import { ProdContext } from "../Context/Context";
 
 function Header() {
   //toggle menu and close button
   const [toggle, setToggle] = useState(false);
+   //function to go to sign in page
+  const { openRegister, setOpenRegister } = useContext(ProdContext);
+console.log("open reg is:",openRegister)
 
   const toggleHandle = () => {
     setToggle(!toggle);
@@ -49,7 +53,7 @@ function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/login">Register</Link>
+              <button onClick={() => setOpenRegister(true)}>REGISTER</button>
             </li>
             <li>
               <img
