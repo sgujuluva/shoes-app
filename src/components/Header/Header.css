@@ -30,7 +30,16 @@ nav ul li a {
   font-weight: 800;
   font-size: 1.2rem;
 }
-
+.header-menu button{
+  text-transform: uppercase;
+  color: black;
+  font-weight: 800;
+  font-size: 1.2rem;
+text-align: center;
+background-color: Transparent;
+background-repeat:no-repeat;
+border: none; 
+}
 .header .menu,
 .header .close {
   display: none;
