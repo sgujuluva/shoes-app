@@ -58,6 +58,11 @@
   width:80%;
 }
  */
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
 .single-prod-details {
   width: 60%;
   padding: 5%;
@@ -68,14 +73,13 @@
   display: flex;
   justify-content: space-between;
   height: 100%;
-  padding:5%;
+  padding: 5%;
 }
 .single-prod-container img {
   width: 40%;
   object-fit: contain;
 }
 .single-prod-container .single-prod-info {
- 
   height: 100%;
 
   padding: 2%;

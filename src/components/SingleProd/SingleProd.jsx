@@ -37,7 +37,8 @@ function SingleProd() {
         </div>
       ))}
     </div> */
-    <div className="single-prod-details">
+   <div className="main">
+     <div className="single-prod-details">
       <div className="single-prod-container">
         {filterProd.map((item) => (
           <>
@@ -60,6 +61,7 @@ function SingleProd() {
         ))}
       </div>
     </div>
+   </div>
   );
 }
 

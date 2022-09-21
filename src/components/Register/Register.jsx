@@ -7,13 +7,13 @@ import "./register.css";
 
 function Register() {
   //taken from context
-  const [openRegister, setOpenRegister] = useContext(ProdContext);
+let {openRegister, setOpenRegister} = useContext(ProdContext);
   //count for login and account
   const [count, setCount] = useState(0);
-
+  console.log("Bolean", openRegister);
   return (
     <div className="main-container">
-      {openRegister && (
+      
         <div className="container">
           <div className="your-account">
             <div onClick={() => setOpenRegister(false)} className="close">
@@ -73,7 +73,7 @@ function Register() {
             </div>
           </div>
         </div>
-      )}
+      
     </div>
   );
 }

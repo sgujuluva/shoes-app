@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import Register from "../Register/Register.jsx";
 //images
 import MenuIcon from "../../images/menuicon.png";
 import CloseIcon from "../../images/closeicon.png";
@@ -13,9 +14,9 @@ import { ProdContext } from "../Context/Context";
 function Header() {
   //toggle menu and close button
   const [toggle, setToggle] = useState(false);
-   //function to go to sign in page
+  //function to go to sign in page
   const { openRegister, setOpenRegister } = useContext(ProdContext);
-console.log("open reg is:",openRegister)
+  console.log("open reg is:", openRegister);
 
   const toggleHandle = () => {
     setToggle(!toggle);
@@ -25,6 +26,8 @@ console.log("open reg is:",openRegister)
   const { totalItems } = useCart();
   return (
     <div className="header">
+      {openRegister && <Register />}
+
       <div className="header-menu">
         <img
           onClick={toggleHandle}
