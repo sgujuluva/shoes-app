@@ -17,51 +17,31 @@ function SingleProd() {
   console.log("filteredProd is", filterProd);
 
   return (
-    /*  <div className="details">
-      {filterProd.map((item) => (
-        <div className="single-prod-details">
-          <img src={item.src} alt="" />
-          <div className="box">
-            <div className="row">
-              <h3>{item.title}</h3>
-              <h2>{item.price.toFixed(2)} €</h2>
-              <p>{item.colors.map((color,i) => (
-                <button key={i} style={{background : color}}></button>
-              ))}</p> 
-          
-            </div>
-            <p className="desc">{item.description}</p>
-            <Link onClick = {() => addItem(filterProd)} to="/cart">Add to Cart</Link>
-          
-          </div>
-        </div>
-      ))}
-    </div> */
-   <div className="main">
-     <div className="single-prod-details">
-      <div className="single-prod-container">
-        {filterProd.map((item) => (
-          <>
-            <img src={item.src} alt="" />
-            <div className="single-prod-info">
-              <h3>{item.title}</h3>
-              <h2>{item.price.toFixed(2)} €</h2>
-              <p>
-                {item.colors.map((color, i) => (
-                  <button key={i} style={{ background: color }}></button>
-                ))}
-              </p>
+    <div className="main">
+      <div className="single-prod-details">
+        <div className="single-prod-container">
+          {filterProd.map((item) => (
+            <>
+              <img src={item.src} alt="" />
+              <div className="single-prod-info">
+                <h3>{item.title}</h3>
+                <h2>{item.price.toFixed(2)} €</h2>
+                <p>
+                  {item.colors.map((color, i) => (
+                    <button key={i} style={{ background: color }}></button>
+                  ))}
+                </p>
 
-              <p className="desc">{item.description}</p>
-              <Link onClick={() => addItem(filterProd)} to="/cart">
-                Add to Cart
-              </Link>
-            </div>
-          </>
-        ))}
+                <p className="desc">{item.description}</p>
+                <Link onClick={() => addItem(filterProd)} to="/cart">
+                  Add to Cart
+                </Link>
+              </div>
+            </>
+          ))}
+        </div>
       </div>
     </div>
-   </div>
   );
 }
 

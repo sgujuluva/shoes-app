@@ -12,13 +12,13 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
   const [count, setCount] = useState(0);
   console.log("Bolean", openRegister);
   return (
-    <div className="main-container">
+    <div className="register-container">
       
         <div className="container">
           <div className="your-account">
-            <div onClick={() => setOpenRegister(false)} className="close">
-              <h2 className="close-button">X</h2>
-              <h2>Close</h2>
+          <div onClick={() => setOpenRegister(false)} className="close-btn">
+              <h2>X</h2>
+          <h2>Close</h2>
             </div>
             <div className="heading">
               <h1>Your Account</h1>
@@ -46,7 +46,7 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
                   />
                   <input
                     type="password"
-                    placeholder="Email..."
+                    placeholder="Password..."
                     name="password"
                     id=""
                   />
@@ -63,7 +63,7 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
                   />
                   <input
                     type="password"
-                    placeholder="Email..."
+                    placeholder="Password..."
                     name="password"
                     id=""
                   />

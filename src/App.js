@@ -2,7 +2,6 @@
 import {Routes, Route} from "react-router-dom";
 //components
 import Header from "./components/Header/Header"
-import Display from "./components/Display/Display";
 import SingleProd from "./components/SingleProd/SingleProd";
 import Products from "./components/Products/Products";
 import Cart from "./components/Cart/Cart";
