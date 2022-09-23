@@ -26,7 +26,7 @@ function Cart() {
                 return (
                   <tr key={index}>
                     <td>
-                      <img src={item.src} style={{ height: "4rem" }} alt="" />
+                      <img className="single-image" src={item.src} style={{ height: "4rem" }} alt="" />
                     </td>
                     <td>{item.title}</td>
                     <td>{item.price}</td>
@@ -62,7 +62,7 @@ function Cart() {
           </table>
         </div>
         <div className="ms-2 mt-20">
-          <h2>Total Price : {cartTotal.toFixed(2)}</h2>
+          <h2>Total Price : {cartTotal.toFixed(2)} €</h2>
           <Link to = "/payment"><button className="btn btn-secondary ms-2">Payment</button></Link>
         </div>
         <div className="col-auto ms-auto">
