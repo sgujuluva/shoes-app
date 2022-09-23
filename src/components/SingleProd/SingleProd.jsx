@@ -8,11 +8,12 @@ import Cart from "../Cart/Cart";
 
 function SingleProd() {
   const { products } = useContext(ProdContext);
+
   const { addItem } = useCart();
-  console.log("addItem is", addItem);
+   
   const params = useParams(); // to get the particular prod id with params
   console.log("params are:", params.id);
-  //getting that particular prod using filter
+    //getting that particular prod using filter
   let filterProd = products.filter((item) => item.id === params.id);
   console.log("filteredProd is", filterProd);
 
@@ -33,7 +34,7 @@ function SingleProd() {
                 </p>
 
                 <p className="desc">{item.description}</p>
-                <Link onClick={() => addItem(filterProd)} to="/cart">
+                <Link onClick={() => addItem(item)} to="/cart/">
                   Add to Cart
                 </Link>
               </div>
