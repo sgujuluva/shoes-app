@@ -71,7 +71,7 @@ function Header() {
               <button onClick={() => setOpenRegister(true)}>REGISTER</button>
             </li>
             <li>
-              <h4> Welcome {foundUser?.username}!!</h4>
+              <h4> `Welcome {foundUser?.username} !!`</h4>
             </li>
             <li>
               <img
