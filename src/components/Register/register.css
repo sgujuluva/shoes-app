@@ -41,8 +41,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  border: 2px red solid;
-  height: 80%;
+  height: 90%;
   width: 100%;
 }
 @keyframes scaleOut {
@@ -92,13 +91,13 @@
   width: 70%;
   padding-bottom: 2%;
 }
-.register-container form {
+.show form,.register-container form {
   display: flex;
   flex-direction: column;
   width: 70%;
   gap: 1rem;
 }
-.register-container input {
+.show input,.register-container input {
   font-size: 1rem;
   padding: 1.5%;
   border: none;
@@ -106,7 +105,7 @@
   border: 1px solid black;
 }
 
-.register-container button {
+.show button,.register-container button {
   padding: 3%;
   min-width: 40%;
   color: white;

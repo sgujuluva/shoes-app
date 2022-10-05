@@ -81,8 +81,7 @@ function Register() {
   };
 
   let getUser = async () => {
-    console.log("hello");
-    //should get the user by id?
+  
     let res = await fetch(
       "https://sgujuluva-nike-clone.herokuapp.com/users/getusers"
     );
