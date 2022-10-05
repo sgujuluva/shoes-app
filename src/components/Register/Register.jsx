@@ -52,7 +52,7 @@ function Register() {
     ) {
       setIsSignedIn(true);
       setOpenRegister(false);
-      setGoToPayment(true)
+      setGoToPayment(true);
       alert("Sign In is successfully done");
     } else {
       setIsSignedIn(false);
@@ -67,19 +67,25 @@ function Register() {
 
   const handleSubmitSignUp = (e) => {
     e.preventDefault();
-    axios.post("https://sgujuluva-nike-clone.herokuapp.com/users/create", signUp);
+    axios.post(
+      "https://sgujuluva-nike-clone.herokuapp.com/users/create",
+      signUp
+    );
     alert("Sign up is successfully done");
     setSignUp({
       username: "",
       email: "",
       password: "",
     });
+    setCount(0);
   };
 
   let getUser = async () => {
     console.log("hello");
     //should get the user by id?
-    let res = await fetch("https://sgujuluva-nike-clone.herokuapp.com/users/getusers");
+    let res = await fetch(
+      "https://sgujuluva-nike-clone.herokuapp.com/users/getusers"
+    );
     let json = await res.json();
     //  let res = await axios.get("https://sgujuluva-nike-clone.herokuapp.com/users/getusers");
     // console.log("res is",res)
@@ -92,7 +98,7 @@ function Register() {
   console.log("This is the users", users);
 
   return (
-    <div className="register-container">
+    <div className={openRegister ? "show": "register-container"}>
       <div className="container">
         <div className="your-account">
           <div onClick={() => setOpenRegister(false)} className="close-btn">

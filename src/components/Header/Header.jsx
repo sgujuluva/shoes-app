@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import Register from "../Register/Register.jsx";
 //images
@@ -10,6 +10,7 @@ import Nikelogo from "../../images/nikelogo.png";
 //styles
 import "./Header.css";
 import { ProdContext } from "../Context/Context";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   //toggle menu and close button
@@ -25,6 +26,11 @@ function Header() {
 
   const toggleHandle = () => {
     setToggle(!toggle);
+  };
+  let navigate = useNavigate();
+  let navToProducts = () => {
+    navigate("/product");
+    setOpenRegister(false);
   };
 
   //useCart
@@ -55,7 +61,8 @@ function Header() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/product">Product</Link>
+              <button onClick={navToProducts}>Products</button>
+              {/* <Link to="/product">Product</Link> */}
             </li>
             <li>
               <Link to="/contact">Contact</Link>

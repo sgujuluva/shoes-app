@@ -1,15 +1,57 @@
 .register-container {
- 
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: scale 2s forwards; */
 }
 .register-container .container {
-  position: fixed;
+  /* position: fixed;
   top: 5%;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  transition:width 2s linear 1s;;
+}
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.show {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scaleOut 2s forwards;
+}
+.show .container {
+  /* position: fixed;
+  top: 5%;
+  right: 0;
+  bottom: 0; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 2px red solid;
+  height: 80%;
+  width: 100%;
+}
+@keyframes scaleOut {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 .your-account {
   background-color: rgba(255, 255, 255, 0.896);
