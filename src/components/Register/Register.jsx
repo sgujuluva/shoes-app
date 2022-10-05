@@ -43,7 +43,7 @@ function Register() {
 
   const handleSubmitSignIn = (e) => {
     e.preventDefault();
-    // axios.post("http://localhost:4000/users/create", signIn);
+    // axios.post("https://sgujuluva-nike-clone.herokuapp.com/users/create", signIn);
     if (
       users.some(
         (item) =>
@@ -67,7 +67,7 @@ function Register() {
 
   const handleSubmitSignUp = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:4000/users/create", signUp);
+    axios.post("https://sgujuluva-nike-clone.herokuapp.com/users/create", signUp);
     alert("Sign up is successfully done");
     setSignUp({
       username: "",
@@ -79,9 +79,9 @@ function Register() {
   let getUser = async () => {
     console.log("hello");
     //should get the user by id?
-    let res = await fetch("http://localhost:4000/users/getusers");
+    let res = await fetch("https://sgujuluva-nike-clone.herokuapp.com/users/getusers");
     let json = await res.json();
-    //  let res = await axios.get("http://localhost:4000/users/getusers");
+    //  let res = await axios.get("https://sgujuluva-nike-clone.herokuapp.com/users/getusers");
     // console.log("res is",res)
     return json;
   };
