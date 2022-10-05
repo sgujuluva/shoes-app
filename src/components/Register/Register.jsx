@@ -43,7 +43,7 @@ function Register() {
 
   const handleSubmitSignIn = (e) => {
     e.preventDefault();
-    // axios.post("https://sgujuluva-nike-clone.herokuapp.com/users/create", signIn);
+
     if (
       users.some(
         (item) =>
@@ -77,17 +77,15 @@ function Register() {
       email: "",
       password: "",
     });
-    setCount(0);
+    setCount(0); //after signup , closing the register component
   };
 
   let getUser = async () => {
-  
     let res = await fetch(
       "https://sgujuluva-nike-clone.herokuapp.com/users/getusers"
     );
     let json = await res.json();
-    //  let res = await axios.get("https://sgujuluva-nike-clone.herokuapp.com/users/getusers");
-    // console.log("res is",res)
+
     return json;
   };
 
@@ -97,7 +95,7 @@ function Register() {
   console.log("This is the users", users);
 
   return (
-    <div className={openRegister ? "show": "register-container"}>
+    <div className={openRegister ? "show" : "register-container"}>
       <div className="container">
         <div className="your-account">
           <div onClick={() => setOpenRegister(false)} className="close-btn">

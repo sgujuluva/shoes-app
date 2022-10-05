@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProdContext } from "../Context/Context";
+//styles
+import "./Payment.css"
 
 function Payment() {
   const { openRegister, setOpenRegister, signIn, setSignIn, users, setUsers } =
