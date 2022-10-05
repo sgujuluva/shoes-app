@@ -55,6 +55,12 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
               )}
               {count === 1 && (
                 <form>
+                    <input
+                    type="username"
+                    placeholder="username..."
+                    name="username"
+                    id=""
+                  />
                   <input
                     type="email"
                     placeholder="Email..."
