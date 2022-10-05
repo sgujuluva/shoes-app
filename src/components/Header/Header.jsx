@@ -18,7 +18,7 @@ function Header() {
   const { openRegister, setOpenRegister, signIn, setSignIn, users, setUsers } =
     useContext(ProdContext);
   console.log("open reg is:", openRegister);
-  
+
   let foundUser = users.find((item) => item.email === signIn.email);
 
   console.log(foundUser);
@@ -26,7 +26,7 @@ function Header() {
   const toggleHandle = () => {
     setToggle(!toggle);
   };
-  console.log("togle is:", toggle);
+
   //useCart
   const { totalItems } = useCart();
   return (

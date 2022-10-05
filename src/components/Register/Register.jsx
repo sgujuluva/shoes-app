@@ -51,8 +51,8 @@ function Register() {
       )
     ) {
       setIsSignedIn(true);
-      setGoToPayment(true);
       setOpenRegister(false);
+      setGoToPayment(true)
       alert("Sign In is successfully done");
     } else {
       setIsSignedIn(false);

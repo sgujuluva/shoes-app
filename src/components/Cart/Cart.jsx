@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
@@ -6,6 +7,11 @@ import { ProdContext } from "../Context/Context";
 //import "./Cart.css"
 function Cart() {
   let navigate = useNavigate();
+  useEffect(() => {
+    if (isSignedIn) {
+      navigate("/payment");
+    }
+  }, []);
   let {
     openRegister,
     setOpenRegister,
@@ -24,15 +30,20 @@ function Cart() {
     emptyCart,
   } = useCart();
   console.log("items in cart page", items);
+
   if (isEmpty) return <div>Your Cart is empty!!!</div>;
 
   let handlePayment = () => {
     if (isSignedIn) {
       navigate("/payment");
-    }else {
+    } else {
       setOpenRegister(true);
     }
   };
+  {
+    goToPayment && navigate("/payment");
+  }
+
   return (
     <section className="py-4 container">
       <div className="row justify-content-center align-items-center">
