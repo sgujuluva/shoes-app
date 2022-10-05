@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useContext } from "react";
 import { ProdContext } from "../Context/Context";
+import axios from "axios";
 //style
 import "./register.css";
 
@@ -16,8 +17,37 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
     password:""
   })
   //for signup newuser
-  
+  const[signUp,setSignUp] = useState({
+    username:"",
+    email :"",
+    password:""
+  })
+  //state for users
+  const [users,setusers] = useState([]);
+
   console.log("Bolean", openRegister);
+
+//onchange fns
+
+const handleChangeSignUp = (e) => {
+setSignUp({...signUp,[e.target.name]:e.target.value})
+}
+
+const handleSubmitSignUp = (e) => {
+  e.prevent.default();
+axios.post("http://localhost:6000/users/create",signUp);
+alert("Sign up is successfully done");
+setSignUp({
+  username:"",
+  email:"",
+  password:""
+})
+}
+
+
+
+
+
   return (
     <div className="register-container">
       
@@ -43,42 +73,54 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
                   Create Account
                 </h3>
               </div>
+             {/* =========================== signin ================= =======================*/}
               {count === 0 && (
-                <form>
+                <form onSubmit = {handleSubmitSignIn}>
                   <input
+                  onChange = {handleChangeSignIn}
                     type="email"
                     placeholder="Email..."
                     name="email"
                     id=""
+                    value = {signIn.email}
                   />
                   <input
+                  onChange = {handleChangeSignIn}
                     type="password"
                     placeholder="Password..."
                     name="password"
                     id=""
+                    value = {signIn.password}
                   />
                   <button>LOGIN</button>
                 </form>
               )}
+              {/* ==================signout==================================================== */}
               {count === 1 && (
-                <form>
+                <form onSubmit={handleSubmitSignUp}>
                     <input
+                    onChange={handleChangeSignUp}
                     type="username"
                     placeholder="username..."
                     name="username"
                     id=""
+                    value={signUp.username}
                   />
                   <input
+                   onChange={handleChangeSignUp}
                     type="email"
                     placeholder="Email..."
                     name="email"
                     id=""
+                    value={signUp.email}
                   />
                   <input
+                   onChange={handleChangeSignUp}
                     type="password"
                     placeholder="Password..."
                     name="password"
                     id=""
+                    value={signUp.password}
                   />
                   <button>SIGN UP</button>
                 </form>
