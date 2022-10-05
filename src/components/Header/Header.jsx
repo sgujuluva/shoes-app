@@ -68,7 +68,7 @@ function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <button onClick={() => setOpenRegister(true)}>REGISTER</button>
+              <button onClick={() => setOpenRegister(true)}>LOGIN</button>
             </li>
             <li>
               <h4> {foundUser?.username} </h4>
