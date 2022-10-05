@@ -11,8 +11,15 @@ export const ProdContext = createContext();
 function Context({ children }) {
   //once register button is clicked, it should popup register form
   const [openRegister, setOpenRegister] = useState(false);
+  let[isSignedIn,setIsSignedIn] = useState(false)
+  const [signIn, setSignIn] = useState({
+    email: "",
+    password: "",
+  });
+  let[goToPayment,setGoToPayment] = useState(false)
+  const [users, setUsers] = useState([]);
   return (
-    <ProdContext.Provider value={{ products,openRegister, setOpenRegister }}>{children}</ProdContext.Provider>
+    <ProdContext.Provider value={{goToPayment,setGoToPayment, products,openRegister, setOpenRegister,isSignedIn,setIsSignedIn,signIn, setSignIn,users, setUsers }}>{children}</ProdContext.Provider>
   );
 }
 

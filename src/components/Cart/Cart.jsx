@@ -1,8 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import { ProdContext } from "../Context/Context";
 //import "./Cart.css"
 function Cart() {
+  let navigate = useNavigate();
+  let {
+    openRegister,
+    setOpenRegister,
+    isSignedIn,
+    setIsSignedIn,
+    setGoToPayment,
+    goToPayment,
+  } = useContext(ProdContext);
   const {
     isEmpty,
     totalItems,
@@ -15,6 +26,13 @@ function Cart() {
   console.log("items in cart page", items);
   if (isEmpty) return <div>Your Cart is empty!!!</div>;
 
+  let handlePayment = () => {
+    if (isSignedIn) {
+      navigate("/payment");
+    }else {
+      setOpenRegister(true);
+    }
+  };
   return (
     <section className="py-4 container">
       <div className="row justify-content-center align-items-center">
@@ -26,7 +44,12 @@ function Cart() {
                 return (
                   <tr key={index}>
                     <td>
-                      <img className="single-image" src={item.src} style={{ height: "4rem" }} alt="" />
+                      <img
+                        className="single-image"
+                        src={item.src}
+                        style={{ height: "4rem" }}
+                        alt=""
+                      />
                     </td>
                     <td>{item.title}</td>
                     <td>{item.price}</td>
@@ -63,16 +86,15 @@ function Cart() {
         </div>
         <div className="ms-2 mt-20">
           <h2>Total Price : {cartTotal.toFixed(2)} €</h2>
-          <Link to = "/payment"><button className="btn btn-secondary ms-2">Payment</button></Link>
+          <button onClick={handlePayment} className="btn btn-secondary ms-2">
+            Payment
+          </button>
         </div>
         <div className="col-auto ms-auto">
           <button className="btn btn-secondary m-2" onClick={() => emptyCart()}>
             Clear Cart
           </button>
         </div>
-      
-        
-        
       </div>
     </section>
   );

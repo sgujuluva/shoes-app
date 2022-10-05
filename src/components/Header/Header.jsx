@@ -15,8 +15,13 @@ function Header() {
   //toggle menu and close button
   const [toggle, setToggle] = useState(false);
   //function to go to sign in page
-  const { openRegister, setOpenRegister } = useContext(ProdContext);
+  const { openRegister, setOpenRegister, signIn, setSignIn, users, setUsers } =
+    useContext(ProdContext);
   console.log("open reg is:", openRegister);
+  
+  let foundUser = users.find((item) => item.email === signIn.email);
+
+  console.log(foundUser);
 
   const toggleHandle = () => {
     setToggle(!toggle);
@@ -57,6 +62,9 @@ function Header() {
             </li>
             <li>
               <button onClick={() => setOpenRegister(true)}>REGISTER</button>
+            </li>
+            <li>
+              <h4>{foundUser?.username}</h4>
             </li>
             <li>
               <img
