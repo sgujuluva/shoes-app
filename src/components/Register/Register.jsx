@@ -8,8 +8,15 @@ import "./register.css";
 function Register() {
   //taken from context
 let {openRegister, setOpenRegister} = useContext(ProdContext);
-  //count for login and account
+  // //state to switch between login and create account
   const [count, setCount] = useState(0);
+  //for signin
+  const [signIn,setSignIn] = useState({
+    email :"",
+    password:""
+  })
+  //for signup newuser
+  
   console.log("Bolean", openRegister);
   return (
     <div className="register-container">
