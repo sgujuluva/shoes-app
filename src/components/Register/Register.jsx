@@ -28,7 +28,21 @@ let {openRegister, setOpenRegister} = useContext(ProdContext);
   console.log("Bolean", openRegister);
 
 //onchange fns
-
+// signin
+const handleChangeSignIn = (e) => {
+  setSignUp({...signIn,[e.target.name]:e.target.value})
+  }
+  
+  const handleSubmitSignIn = (e) => {
+    e.prevent.default();
+  axios.post("http://localhost:6000/users/create",signIn);
+  alert("Sign In is successfully done");
+  setSignIn({
+     email:"",
+    password:""
+  })
+  }
+// signup
 const handleChangeSignUp = (e) => {
 setSignUp({...signUp,[e.target.name]:e.target.value})
 }
@@ -43,10 +57,6 @@ setSignUp({
   password:""
 })
 }
-
-
-
-
 
   return (
     <div className="register-container">
