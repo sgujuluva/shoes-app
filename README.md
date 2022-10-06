@@ -24,6 +24,10 @@ Adding the payment method. Connecting to the database
 - [x] _JavaScript_
 - [x] _React_
 - [x] _npm_
+- [x] _node js_
+- [x] _express_
+- [x] _mongoose_
+- [x] _Mongo DB_
 
 
 ---
