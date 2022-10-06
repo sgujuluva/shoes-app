@@ -17,9 +17,9 @@ function Payment() {
   return (
     <div className="payment">
       <div className="paymentContainer">
-        <h1>Hi {foundUser?.username}, This is the gateway for payment</h1>
+        <h1>Hi {foundUser?.username}, This is the gateway for payment !!!</h1>
         <h2>Thank you for your visit</h2>
-        <button onClick={handleGo}>Go back to the main</button>
+        <button onClick={handleGo}>Home</button>
       </div>
     </div>
   );
