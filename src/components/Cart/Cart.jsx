@@ -31,7 +31,7 @@ function Cart() {
   } = useCart();
   console.log("items in cart page", items);
 
-  if (isEmpty) return <div>Your Cart is empty!!!</div>;
+  if (isEmpty) return <h2 className="cart-empty">Your Cart is empty!!!</h2>;
 
   let handlePayment = () => {
     if (isSignedIn) {

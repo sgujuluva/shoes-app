@@ -25,3 +25,7 @@ button{
     border:2px solid green;
  
 }
+.cart-empty{
+    border:2px solid red;
+    text-align: center;
+}

@@ -72,7 +72,7 @@ function Header() {
               <button onClick={() => setOpenRegister(true)}>LOGIN</button>
             </li>
             <li>
-              <h4> {foundUser?.username} </h4>
+              <h4> Welcome  {foundUser?.username[0].toUpperCase()+foundUser.username.slice(1)} </h4>
             </li>
             <li>
               <img
