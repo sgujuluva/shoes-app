@@ -55,6 +55,7 @@ function Register() {
       setOpenRegister(false);
       setGoToPayment(true);
       alert("Sign In is successfully done");
+      setSignIn("");
     } else {
       setIsSignedIn(false);
       alert("E-Mail or Password is wrong !");
