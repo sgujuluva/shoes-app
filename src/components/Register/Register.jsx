@@ -128,6 +128,7 @@ function Register() {
                   name="email"
                   id=""
                   value={signIn.email}
+                  required
                 />
                 <input
                   onChange={handleChangeSignIn}
@@ -136,6 +137,7 @@ function Register() {
                   name="password"
                   id=""
                   value={signIn.password}
+                  required
                 />
                 <button>LOGIN</button>
               </form>
@@ -150,6 +152,7 @@ function Register() {
                   name="username"
                   id=""
                   value={signUp.username}
+                  required
                 />
                 <input
                   onChange={handleChangeSignUp}
@@ -158,6 +161,7 @@ function Register() {
                   name="email"
                   id=""
                   value={signUp.email}
+                  required
                 />
                 <input
                   onChange={handleChangeSignUp}
@@ -166,6 +170,7 @@ function Register() {
                   name="password"
                   id=""
                   value={signUp.password}
+                  required
                 />
                 <button>SIGN UP</button>
               </form>
