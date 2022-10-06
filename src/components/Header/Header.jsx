@@ -7,7 +7,7 @@ import MenuIcon from "../../images/menuicon.png";
 import CloseIcon from "../../images/closeicon.png";
 import CartIcon from "../../images/carticon.png";
 import Nikelogo from "../../images/nikelogo.png";
-import userLogin from "../../images/user.png"
+import userLogin from "../../images/user.png";
 //styles
 import "./Header.css";
 import { ProdContext } from "../Context/Context";
@@ -17,14 +17,23 @@ function Header() {
   //toggle menu and close button
   const [toggle, setToggle] = useState(false);
   //function to go to sign in page
-  const { openRegister, setOpenRegister, signIn, setSignIn, users, setUsers, isSignedIn,
-    setIsSignedIn} =
-    useContext(ProdContext);
+  const {
+    openRegister,
+    setOpenRegister,
+    signIn,
+    setSignIn,
+    users,
+    setUsers,
+    isSignedIn,
+    setIsSignedIn,
+  } = useContext(ProdContext);
   console.log("open reg is:", openRegister);
 
-  let foundUser = users.find((item) => item.email === signIn.email && item.password === signIn.password);
+  let foundUser = users.find(
+    (item) => item.email === signIn.email && item.password === signIn.password
+  );
 
-  console.log("founduser",foundUser);
+  console.log("founduser", foundUser);
 
   const toggleHandle = () => {
     setToggle(!toggle);
@@ -72,12 +81,28 @@ function Header() {
             <li>
               <button onClick={() => setOpenRegister(true)}>LOGIN</button>
             </li>
-            <li>
-            {foundUser ? <>  <h4> Welcome  {foundUser.username.charAt(0).toUpperCase()+foundUser.username.slice(1)  } </h4> <img src={userLogin} alt="" width="25" /> </> : "" } 
-          {/*  <h4 > {foundUser?.username} </h4>  */}
-             
+            {/* ===================== */}
+            {isSignedIn && (
+              <li className="user">
+                <select name="" id="">
+                  <option value="username">
+                    {foundUser ? (
+                      <>
+                        Welcome{" "} {foundUser.username.charAt(0).toUpperCase() +
+                          foundUser.username.slice(1)}
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </option>
 
-            </li>
+                  <option value="logout">Log Out</option>
+                </select>
+
+                {/*  <h4 > {foundUser?.username} </h4>  */}
+              </li>
+            )}
+            {/* =================== */}
             <li>
               <img
                 onClick={toggleHandle}
