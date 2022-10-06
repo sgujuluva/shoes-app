@@ -22,7 +22,7 @@ function Header() {
     useContext(ProdContext);
   console.log("open reg is:", openRegister);
 
-  let foundUser = users.find((item) => item.email === signIn.email);
+  let foundUser = users.find((item) => item.email === signIn.email && item.password === signIn.password);
 
   console.log("founduser",foundUser);
 
@@ -73,7 +73,7 @@ function Header() {
               <button onClick={() => setOpenRegister(true)}>LOGIN</button>
             </li>
             <li>
-            {foundUser? <>  <h4> Welcome  {foundUser.username.charAt(0).toUpperCase()+foundUser.username.slice(1)  } </h4> <img src={userLogin} alt="" width="25" /> </> : "" } 
+            {foundUser ? <>  <h4> Welcome  {foundUser.username.charAt(0).toUpperCase()+foundUser.username.slice(1)  } </h4> <img src={userLogin} alt="" width="25" /> </> : "" } 
           {/*  <h4 > {foundUser?.username} </h4>  */}
              
 

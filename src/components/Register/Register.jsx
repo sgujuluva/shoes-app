@@ -42,6 +42,7 @@ function Register() {
     setSignIn({ ...signIn, [e.target.name]: e.target.value });
   };
 
+ 
   const handleSubmitSignIn = (e) => {
     e.preventDefault();
 
@@ -55,7 +56,7 @@ function Register() {
       setOpenRegister(false);
       setGoToPayment(true);
       alert("Sign In is successfully done");
-      setSignIn("");
+     /*  setSignIn(""); */
     } else {
       setIsSignedIn(false);
       alert("E-Mail or Password is wrong !");
@@ -74,11 +75,11 @@ function Register() {
       signUp
     );
     alert("Sign up is successfully done");
-    setSignUp({
+  setSignUp({
       username: "",
       email: "",
       password: "",
-    });
+    }); 
     setCount(0); //after signup , closing the register component
   };
 
@@ -124,7 +125,7 @@ function Register() {
             {count === 0 && (
               <form onSubmit={handleSubmitSignIn}>
                 <input
-                  onChange={handleChangeSignIn}
+                   onChange={handleChangeSignIn} 
                   type="email"
                   placeholder="Email..."
                   name="email"
@@ -133,7 +134,7 @@ function Register() {
                   required
                 />
                 <input
-                  onChange={handleChangeSignIn}
+                  onChange={handleChangeSignIn} 
                   type="password"
                   placeholder="Password..."
                   name="password"
