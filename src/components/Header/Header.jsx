@@ -7,6 +7,7 @@ import MenuIcon from "../../images/menuicon.png";
 import CloseIcon from "../../images/closeicon.png";
 import CartIcon from "../../images/carticon.png";
 import Nikelogo from "../../images/nikelogo.png";
+import userLogin from "../../images/user.png"
 //styles
 import "./Header.css";
 import { ProdContext } from "../Context/Context";

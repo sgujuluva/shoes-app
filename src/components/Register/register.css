@@ -26,18 +26,18 @@
 }
 .show {
   position: fixed;
-  inset: 0;
-  z-index: 5;
+/*  inset: 0; */
+  position: fixed;
+  top: 5%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: scaleOut 2s forwards;
 }
 .show .container {
-  /* position: fixed;
-  top: 5%;
-  right: 0;
-  bottom: 0; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -54,16 +54,21 @@
 }
 .your-account {
   background-color: rgba(255, 255, 255, 0.896);
-  min-width: 45%;
+
   box-shadow: 3px 3px 5px black;
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+.your-account h2{
+  margin-top:35%; 
+ font-size: 1rem;
+ font-weight: 800;
+}
 .close-btn {
-  width: 30%;
+  width: 25%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -80,6 +85,12 @@
 }
 .heading h1 {
   margin-bottom: 2%;
+  font-size:1.7rem;
+  font-weight: 800;
+}
+.heading h3 {
+  font-size:1.3rem;
+  font-weight: 800;
 }
 .accounts {
   width: 70%;

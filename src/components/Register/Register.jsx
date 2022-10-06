@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { ProdContext } from "../Context/Context";
 import axios from "axios";
+
 //style
 import "./register.css";
 import { useEffect } from "react";
